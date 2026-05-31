@@ -1,0 +1,261 @@
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+    color:#222;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+    height: 200px;
+}
+
+.logo img{
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin-left:20px;
+}
+
+nav a:hover{
+    background:#c59d5f;
+    color: #fff;
+    transition: all .5s ease;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#c59d5f;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+#catalogo{
+    padding:80px 10%;
+}
+
+#catalogo h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.como-funciona{
+    padding:80px 10%;
+    background:#111;
+    color:white;
+}
+
+.como-funciona h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.pasos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.pasos div{
+    background:#222;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+#contacto{
+    padding:80px 20px;
+    text-align:center;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* TABLETS */
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .logo{
+        height: auto;
+    }
+
+    .logo img{
+        width: 150px;
+        height: 150px;
+    }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a{
+        margin-left: 0;
+    }
+
+    nav a:hover{
+        color: #c59d5f;
+        transition: all .5s ease;
+        background: none;
+    }
+
+    .hero{
+        padding: 60px 20px;
+    }
+
+    .hero h1{
+        font-size: 38px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+
+    #catalogo,
+    .como-funciona{
+        padding: 60px 5%;
+    }
+
+    .cards{
+        grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    }
+
+    .pasos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 480px){
+
+    header{
+        padding: 15px;
+    }
+
+    .logo img{
+        width: 120px;
+        height: 120px;
+    }
+
+    nav{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav a:hover{
+        color: #c59d5f;
+        background: none;
+        transition: all .5s ease;
+    }
+
+    .hero{
+        padding: 40px 15px;
+    }
+
+    .hero h1{
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .hero p{
+        font-size: 16px;
+    }
+
+    .btn{
+        width: 100%;
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    #catalogo h2,
+    .como-funciona h2,
+    #contacto h2{
+        font-size: 28px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+    .card{
+        padding: 20px;
+    }
+
+    .pasos{
+        grid-template-columns: 1fr;
+    }
+
+    footer{
+        font-size: 14px;
+        padding: 15px;
+    }
+}   
